@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  constructor(private myRouter: Router) { }
 
-  ngOnInit() {
+  onLoadServers() {
+    //complex calculation
+    this.myRouter.navigate(['/servers']);
   }
 
 }
